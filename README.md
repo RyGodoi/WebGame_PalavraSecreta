@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Jogo de Palavra Secreta
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Descrição**:  
+Desafie seu vocabulário e descubra palavras secretas! Adivinhe as letras corretas e forme palavras de categorias diversas. Cada acerto revela parte da palavra e gera pontos, enquanto erros diminuem suas chances. Alcance a maior pontuação e vença o desafio!
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- **Adivinhação de palavras**: O jogador deve adivinhar as letras corretas para formar palavras ocultas.
+- **Categorias variadas**: As palavras estão divididas em categorias, oferecendo dicas adicionais.
+- **Pontuação dinâmica**: A pontuação aumenta conforme o jogador acerta mais letras, e diminui se cometer erros.
+- **Tela de início**: Interface simples com um botão para iniciar o jogo.
+- **Tela de jogo**: Área onde o jogador vê as letras adivinhadas, as erradas e a pontuação.
+- **Tela de fim de jogo**: Mostra a pontuação final e oferece a opção de reiniciar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Como Jogar
 
-### `npm test`
+1. Ao iniciar o jogo, uma palavra oculta será escolhida aleatoriamente de uma categoria.
+2. Você terá 5 tentativas para adivinhar as letras que formam a palavra.
+3. A cada letra correta, a palavra será parcialmente revelada.
+4. Se você acertar todas as letras antes de esgotar as tentativas, o jogo será reiniciado com uma nova palavra.
+5. Se suas tentativas se esgotarem, o jogo será encerrado e você poderá tentar novamente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: Framework para construção da interface.
+- **Hooks**: `useState`, `useEffect`, `useCallback` para gerenciamento de estado e efeitos colaterais.
+- **CSS**: Estilização personalizada para as telas do jogo.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Como Rodar o Projeto
 
-### `npm run eject`
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/usuario/repo.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Navegue até a pasta do projeto:
+   ```bash
+   cd nome-do-repo
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Acesse o jogo no navegador em `http://localhost:3000`.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contribuição
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Faça um fork deste repositório.
+2. Crie uma branch para sua modificação (`git checkout -b minha-modificacao`).
+3. Faça suas mudanças e envie (`git commit -am 'Adiciona nova funcionalidade'`).
+4. Envie para o repositório remoto (`git push origin minha-modificacao`).
+5. Abra um pull request para revisão.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Licença
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está sob a licença MIT - consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+```
