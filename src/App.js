@@ -31,6 +31,13 @@ function App() {
   const [guesses, setGuesses] = useState(5);
   const [score, SetScore] = useState(0);
 
+  const [game, SetGame] = useState(false);
+
+  const iniciar = () => {
+    SetGame(true);
+    startGame();
+  };
+
   const pickWordAndCategory = useCallback(() => {
     //pick a random category
     const categories = Object.keys(words);
@@ -109,19 +116,19 @@ function App() {
   }, [guesses]);
 
   useEffect(() => {
-    const uniqueLetters = [...new Set(Letters)];
+    if (game) {
+      const uniqueLetters = [...new Set(Letters)];
 
-    //win condition
-    if (guessedLetters.length === uniqueLetters.length) {
-      //add score
-      SetScore((actualScore) =>
-        actualScore <= 0 ? (actualScore += 10) : actualScore * guesses
-      );
-
-      //restart game with new word
-      startGame();
+      //win condition
+      if (guessedLetters.length === uniqueLetters.length) {
+        //add score
+        SetScore((actualScore) =>
+          actualScore <= 0 ? (actualScore += 10) : actualScore * guesses
+        );
+        startGame();
+      }
     }
-  }, [guessedLetters, Letters, startGame, guesses]);
+  }, [guessedLetters, Letters, game, startGame, guesses]);
 
   //start Game Palavra Secreta
   const retry = () => {
@@ -132,7 +139,7 @@ function App() {
 
   return (
     <div className="App">
-      {gameStage === "start" && <StartScreen startGame={() => startGame()} />}
+      {gameStage === "start" && <StartScreen iniciar={iniciar} />}
       {gameStage === "game" && (
         <Game
           verifyLetter={verifyLetter}
@@ -151,3 +158,19 @@ function App() {
 }
 
 export default App;
+
+/*
+useEffect(() => {
+  const uniqueLetters = [...new Set(Letters)];
+
+  //win condition
+  if ((guessedLetters.length === uniqueLetters.length)) {
+    //add score
+    SetScore((actualScore) =>
+      actualScore <= 0 ? (actualScore += 10) : actualScore * guesses
+    );
+
+    //restart game with new word
+  }
+}, [guessedLetters, Letters, startGame, guesses]);
+*/
