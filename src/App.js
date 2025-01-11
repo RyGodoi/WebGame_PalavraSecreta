@@ -43,12 +43,10 @@ function App() {
     const categories = Object.keys(words);
     const category =
       categories[Math.floor(Math.random() * Object.keys(categories).length)];
-    console.log(category);
 
     //pick a random word
     const word =
       words[category][Math.floor(Math.random() * words[category].length)];
-    console.log(word);
 
     return { word, category };
   }, [words]);
@@ -64,7 +62,6 @@ function App() {
     //create an array of letters
     let wordLetters = word.split("");
     wordLetters = wordLetters.map((i) => i.toLowerCase());
-    console.log(wordLetters);
 
     //fill states
     setPickedWord(word);
@@ -158,19 +155,3 @@ function App() {
 }
 
 export default App;
-
-/*
-useEffect(() => {
-  const uniqueLetters = [...new Set(Letters)];
-
-  //win condition
-  if ((guessedLetters.length === uniqueLetters.length)) {
-    //add score
-    SetScore((actualScore) =>
-      actualScore <= 0 ? (actualScore += 10) : actualScore * guesses
-    );
-
-    //restart game with new word
-  }
-}, [guessedLetters, Letters, startGame, guesses]);
-*/

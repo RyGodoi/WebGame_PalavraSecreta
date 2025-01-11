@@ -12,14 +12,16 @@
 
 .wordContainer {
   margin: 1.5em;
-  padding: 1.5em;
-  border: 20px solid #ecfa00;
+  padding: 1em;
+  border: 10px solid #ecfa00;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .letter,
 .blankSquare {
-  font-size: 70px;
+  font-size: 4em;
   line-height: 1.5;
   border: 3px solid #000;
   height: 100px;
@@ -46,4 +48,58 @@
   font-size: 2em;
   text-align: center;
   margin-right: 1em;
+}
+
+/* Para telas pequenas */
+@media (min-width: 600px) and (max-width: 1000px) {
+  .letter,
+  .blankSquare {
+    font-size: 2em;
+    border: 1.5px solid #000;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/* Para telas muito pequenas */
+@media (min-width: 400px) and (max-width: 599px) {
+  .letter,
+  .blankSquare {
+    font-size: 1.5em;
+    border: 1.5px solid #000;
+    height: 33px;
+    width: 35px;
+  }
+}
+/* Para telas muito pequenas */
+@media (min-width: 50px) and (max-width: 399px) {
+  .game h1 {
+    font-size: 1em;
+  }
+
+  .wordContainer {
+    margin: 0.7em;
+    padding: 0.5em;
+    border: 5px solid #ecfa00;
+  }
+
+  .letter,
+  .blankSquare {
+    font-size: 2em;
+    line-height: 0.7;
+    border: 1.5px solid #000;
+    height: 10px;
+    width: 10px;
+  }
+
+  .letterContainer {
+    margin-bottom: 0.6em;
+  }
+
+  .letterContainer input {
+    height: 20px;
+    width: 20px;
+    font-size: 1em;
+    margin-right: 0.5em;
+  }
 }

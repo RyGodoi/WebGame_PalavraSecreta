@@ -106,7 +106,7 @@ export const wordlist = {
     "Boxe",
     "Golfe",
   ],
-  musica: [
+  música: [
     "Guitarra",
     "Bateria",
     "Piano",
@@ -117,7 +117,7 @@ export const wordlist = {
     "Orquestra",
     "Banda",
   ],
-  profissao: [
+  profissão: [
     "Medico",
     "Professor",
     "Engenheiro",
@@ -231,7 +231,7 @@ export const wordlist = {
     "Trena",
     "Lima",
   ],
-  espacos: [
+  LugaresDaCasa: [
     "Quarto",
     "Sala",
     "Cozinha",
@@ -241,7 +241,6 @@ export const wordlist = {
     "Varanda",
     "Jardim",
     "Corredor",
-    "Deposito",
   ],
   sentimentos: [
     "Felicidade",
